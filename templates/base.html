@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Pages</title>
+        <link rel="icon" type="image/png" href="resources/icon.png">
+        <link rel="apple-touch-icon" type="image/png" href="resources/icon.png">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <style>
+            #header{
+                background-color: #22f0f0;
+                padding: 10px;
+                margin:0px;
+            }
+            #footer{
+                background-color: #22f0f0;
+                padding: 10px;
+            }
+            .back{
+                background-color: #22f0f0;
+            }
+            a{
+                color: white;
+            }
+            main{
+                min-height: calc(100vh - 44px);
+            }
+            .pad{
+                padding:20px 10px 0px 0px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <main>
+            <div class="back m-0 p-0 text-white clearfix">
+                <h1 class="back m-0 float-left">My Portfolio</h1>
+                <span class="back m-0 float-right pad">LOGO</span>
+            </div>
+        <div id="header" class="navbar navbar-expand-sm sticky-top">
+            <ul class="navbar-nav text-white">
+                <li class="nav-item  nav-link"><a href="{% url 'home' %}">Home</a></li>
+                <li class="nav-item nav-link"><a href="{% url 'about' %}">About</a></li>
+                <li class="nav-item nav-link"><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        {% block content %}
+        {% endblock content %}
+        </main>
+        <footer>
+            <div id="footer"class="container-fluid text-white text-center">
+                <small>Copyright &copy;</small>
+            </div>
+        </footer>
+    </body>
+</html>
